@@ -11,7 +11,7 @@ public class Interfaz extends JFrame implements ActionListener{
     public Interfaz(){
         setLayout(null);
         
-        label1 = new JLabel("╔ Antivirus ╝");
+        label1 = new JLabel("╔ Antivirussi ╝");
         label1.setBounds(155, 20, 200, 30);
         add(label1);
 

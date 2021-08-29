@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.event.*;
+import java.io.File;
 
 public class Interfaz extends JFrame implements ActionListener{
     
@@ -19,6 +20,28 @@ public class Interfaz extends JFrame implements ActionListener{
         BotonBucar.setBounds(95, 60, 200, 30);
         add(BotonBucar);
         BotonBucar.addActionListener(this);
+
+        //Funcion del buscar archivo
+
+        public class ListFiles {
+
+    public static void main(String[] args)     {
+
+        String path = "C:/";
+
+        String files;
+        File folder = new File(path);
+        File[] listOfFiles = folder.listFiles();
+
+        for (int i = 0; i < listOfFiles.length; i++)         {
+
+            if (listOfFiles[i].isFile())             {
+                files = listOfFiles[i].getName();
+                System.out.println(files);
+            }
+        }
+    }
+}
 
         BotonUsar = new JButton("▓ Como usar ▓");
         BotonUsar.setBounds(95, 100, 200, 30);

@@ -1,6 +1,8 @@
 package PaquetePrueba;
 import javax.swing.*;
 
+import java.io.File;
+
 import java.awt.event.*;
 import java.io.File;
 
@@ -41,6 +43,19 @@ public class Prueba1 extends JFrame implements ActionListener{
         }
         if(e.getSource() == BotonCerrar){
             System.exit(0);
+        }
+        if(e.getSource() == BotonBucar){
+        String files;
+        File folder = new File(path);
+        File[] listOfFiles = folder.listFiles();
+
+        for (int i = 0; i < listOfFiles.length; i++)         {
+
+            if (listOfFiles[i].isFile())             {
+                files = listOfFiles[i].getName();
+                System.out.println(files);
+                }
+            }    
         }
     }
     public static void main(String[] args){

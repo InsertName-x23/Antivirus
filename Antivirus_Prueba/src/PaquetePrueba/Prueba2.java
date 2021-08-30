@@ -1,13 +1,14 @@
+package PaquetePrueba;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class InterfazUsar extends JFrame implements ActionListener{
+public class Prueba2 extends JFrame implements ActionListener{
 
     private JLabel labelTitulo;
     private JLabel labelUsar;
     JButton BotonAtras; 
 
-    public InterfazUsar(){
+    public Prueba2(){
         setLayout(null);
 
         labelTitulo = new JLabel("¿Como usar?");
@@ -31,7 +32,7 @@ public class InterfazUsar extends JFrame implements ActionListener{
     }
 
     public static void main(String[] args) {
-        InterfazUsar interfaz2 = new InterfazUsar();
+        Prueba2 interfaz2 = new Prueba2();
         interfaz2.setBounds(0, 0, 400, 250);
         interfaz2.setVisible(true); 
         interfaz2.setLocationRelativeTo(null);

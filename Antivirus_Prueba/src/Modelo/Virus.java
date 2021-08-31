@@ -9,4 +9,8 @@ public class Virus {
         this.nombreVirus = nombreVirus;
         this.secuenciaVirus = secuenciaVirus;
     }
+
+    public byte[] getSecuenciaVirus(){
+        return secuenciaVirus;
+    }
 }

@@ -14,6 +14,8 @@ public class Analizador {
 
     public void cargarVirus(){
         
+        // Todo en esta clase sirve para la funcion del boton analizador de archivos, que es el que busca si hay virus en el archivo seleccionado
+        
         Virus Usama = new Virus("USAMA", new byte []{15, 30, 15, 49});
         Virus Antrax = new Virus("ANTRAX", new byte []{72, 72, 15, 29});
         Virus Ebola = new Virus("EBOLA", new byte []{29, 32, 53, 29});
@@ -31,6 +33,8 @@ public class Analizador {
 
     public void detectarVirus(){
 
+        //Esta parte sirve para detectar los virus, utilizando "ifs" en los digitos del archivo
+        
         for(int i = 0; i < bytesArchivo.length; i++){
 
             if(bytesArchivo [i] == listaVirus[0].getSecuenciaVirus()[0]){

@@ -1,11 +1,13 @@
 package Controladores;
 
 import Modelo.Virus;
+import javax.swing.JOptionPane;
 
 public class Analizador {
     
     private byte [] bytesArchivo;
-    private Virus [] listaVirus; 
+    private Virus [] listaVirus;
+    private String virusEncontrados = ""; 
 
     public Analizador(byte[] bytesArchivo){
 
@@ -35,6 +37,8 @@ public class Analizador {
 
         //Esta parte sirve para detectar los virus, utilizando "ifs" en los digitos del archivo
         
+        boolean encontrado = false;
+
         for(int i = 0; i < bytesArchivo.length; i++){
 
             if(bytesArchivo [i] == listaVirus[0].getSecuenciaVirus()[0]){
@@ -45,7 +49,10 @@ public class Analizador {
 
                         if(bytesArchivo [i+3] == listaVirus[0].getSecuenciaVirus()[3]){
 
-                            System.out.print("USAMA Encontrado");
+                            virusEncontrados += virusEncontrados + "virus USAMA\n ";
+                            System.out.println("Virus USAMA");
+                            JOptionPane.showMessageDialog(null,"Virus USAMA encontrado");
+                            encontrado = true;
                         }
                     }
                 }
@@ -59,7 +66,10 @@ public class Analizador {
 
                         if(bytesArchivo [i+3] == listaVirus[1].getSecuenciaVirus()[3]){
 
-                            System.out.print("ANTRAX Encontrado");
+                            virusEncontrados += virusEncontrados + "virus ANTRAX\n ";
+                            System.out.println("Virus ANTRAX");
+                            JOptionPane.showMessageDialog(null,"Virus ANTRAX encontrado");
+                            encontrado = true;
                         }
                     }
                 }
@@ -73,7 +83,10 @@ public class Analizador {
 
                         if(bytesArchivo [i+3] == listaVirus[2].getSecuenciaVirus()[3]){
 
-                            System.out.print("EBOLA Encontrado");
+                            virusEncontrados += virusEncontrados + "virus EBOLA\n ";
+                            System.out.println("Virus EBOLA");
+                            JOptionPane.showMessageDialog(null,"Virus EBOLA encontrado");
+                            encontrado = true;
                         }
                     }
                 }
@@ -87,7 +100,10 @@ public class Analizador {
 
                         if(bytesArchivo [i+3] == listaVirus[3].getSecuenciaVirus()[3]){
 
-                            System.out.print("H1N1 Encontrado");
+                            virusEncontrados += virusEncontrados + "virus H1N1\n ";
+                            System.out.println("Virus H1N1");
+                            JOptionPane.showMessageDialog(null,"Virus H1N1 encontrado");
+                            encontrado = true;
                         }
                     }
                 }
@@ -101,10 +117,20 @@ public class Analizador {
 
                         if(bytesArchivo [i+3] == listaVirus[4].getSecuenciaVirus()[3]){
 
-                            System.out.print("COVID19 Encontrado");
+                            virusEncontrados += virusEncontrados + "virus COVID\n ";
+                            System.out.println("Virus COVID");
+                            JOptionPane.showMessageDialog(null,"Virus COVID encontrado");
+                            encontrado = true;
                         }
                     }
                 }
+            }
+            if(i == bytesArchivo.length){
+            
+                virusEncontrados += virusEncontrados + "No hay virus\n ";
+                System.out.println("No hay virus");
+                JOptionPane.showMessageDialog(null,"No se encontro virus");
+                encontrado = true;
             }
         }
     }

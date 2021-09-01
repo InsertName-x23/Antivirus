@@ -5,6 +5,8 @@ import java.nio.file.Files;
 import java.io.IOException;
 
 public class LectorArchivo {
+   
+    //Esto le da la funcion al programa para leer archivos
     
     private File archivo;
     private byte [] bytesArchivo;

@@ -10,6 +10,8 @@ import java.io.IOException;
 
 public class VentanaVirus extends JFrame implements ActionListener{
     
+    //Toda esta clase funciona para mostrar la interfaz del programa
+    
     private byte [] bytesArchivo = null;
     private JTextArea MostrarRuta;
     private JTextArea MostrarContenido;
